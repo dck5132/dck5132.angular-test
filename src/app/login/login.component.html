@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="container-fluid">
+        <div class="row">
+            <div class ="col-lg-4 col-lg-offset-4 text-center outlines">    
+                <h1>Login</h1>
+                <form (ngSubmit)="onSubmit(f)" #f='ngForm'>
+                  <div class="form-group">
+                    <label for="Username">Username</label>
+                    <input type="text" class="form-control" id="name" ngModel name="username" placeholder="Username" required>
+                  </div>
+             
+                  <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input type="password" class="form-control" id="pass" ngModel name="password" placeholder="Password"required>
+                  </div>
+             
+                  <button type="submit" (click)="sendEvent()" class="btn btn-default pull-left bg-colors">Login</button>
+             
+                </form>
+</div>

@@ -1,0 +1,11 @@
+.outlines{
+    border: 1px solid gray;
+}
+.bg-colors{
+    background-color: #0095ff;
+    color: #FFF;
+}
+.glyphicon.glyphicon-globe {
+    font-size: 150px;
+    color: green;
+}

@@ -1,0 +1,16 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <a class="navbar-brand" [routerLink]="['/']">{{title}}</a>
+        <ul class="nav navbar-nav navbar-right">
+            <ng-template [ngIf]="!authentication.nowCheck()">
+                <li routerLinkActive="active"><a [routerLink]="['/login']">Login</a></li>
+            </ng-template>
+            <ng-template [ngIf]="authentication.nowCheck()">
+                <li routerLinkActive="active"><a [routerLink]="['/assets']">Assets</a></li>
+                <li routerLinkActive="active"><a (click)='authentication.logout(); authentication.nowCheck()'>Logout</a></li>
+            </ng-template>
+        </ul>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

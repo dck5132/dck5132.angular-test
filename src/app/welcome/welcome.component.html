@@ -1,0 +1,21 @@
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class ="col-lg-4 col-lg-offset-4 text-center outlines">    
+                    <span class="glyphicon glyphicon-globe"></span>
+                    <h1>IONX DEMO</h1>
+                    <ng-template [ngIf]="!authentication.nowCheck()">
+                        <p>This is a basic website displaying angular features</p>
+                        <button class="btn btn-default pull-right bg-colors" type="submit" [routerLink]="['/login']" >Login</button>
+                    </ng-template>
+                    <ng-template [ngIf]="authentication.nowCheck()">
+                        <p>Welcome Cyril Kalikin</p>
+                        <button class="btn btn-default bg-colors" type="submit" [routerLink]="['/assets']" >View My Assets</button>
+                        <button class="btn btn-default bg-colors" type="submit" (click)='authentication.logout(); authentication.nowCheck()'>Logout</button>
+                    </ng-template>
+                    
+            </div>
+        </div>
+    </div>
+</section>
+
